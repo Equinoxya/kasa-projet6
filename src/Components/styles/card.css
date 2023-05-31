@@ -1,0 +1,28 @@
+.blocCards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 80vh;
+    position: relative;
+}
+.card{
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    border-radius: 10px;
+    width: 30%;
+    height: 45%;
+}
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+h3{
+    position: absolute;
+    bottom: 28%;
+    left: 2%;
+}
