@@ -1,10 +1,10 @@
 import React from "react";
 import './styles/Home.css'
 import Banner from "../Components/Banner";
-import Card from "../Components/Card";
 import Header from "../Components/Header";
-import Locations from "../Components/Locations";
 import Footer from "../Components/Footer";
+import Apartments from "../Components/Apartments";
+
 
 
 const Home = () => {
@@ -12,7 +12,7 @@ const Home = () => {
         <div className="body">
             <Header />
             <Banner />
-            <Card />
+            <Apartments />
             <Footer />
         </div>
     )
