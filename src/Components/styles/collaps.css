@@ -1,0 +1,39 @@
+.description{
+    color: #FF6060;
+    margin-block: 0;
+    width: 100%;
+}
+.about-container{
+    width: 80%;
+    margin: 5% 5% 5% 5%;
+}
+.titre_description{
+    background-color: #FF6060;
+    color: white;
+    padding: 0.7rem 1rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    animation: normal;
+}
+.titre_description i{
+    cursor: pointer;
+    width: 5%;
+    height: 5%;
+}
+.block{
+    display: block;
+    width: 10px;
+    height: 10px;
+}
+.description_content{
+    background-color: #dfdbdb;
+    color: #FF6060;
+    padding: 1rem;
+    border-radius: 0.7rem;
+    margin-block: 0;
+    position: relative;
+    top: -0.3rem;
+    z-index: -1;
+    }
