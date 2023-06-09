@@ -1,23 +1,28 @@
 .header{
-    width: 90vw;
-    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    margin: 3% 3% 3% 3%;
+    margin: 3% 1% 3% 1%;
 }
 .logo{
-    margin: 5px 5px 5px 5px;
+    margin: 25px;
 }
 ul li{
     list-style: none;
 }
-ul li a{
+ul a{
     text-decoration: none;
     color: #FF6060;
     font-size: 24px;
+    width: 30%;
+}
+ul li:hover{
+    display: inline-block;
+    padding: 2px;
+    border-bottom: #FF6060 2px solid;
 }
 ul{
     margin: 0;
@@ -29,4 +34,5 @@ ul{
 }
 nav{
     width: 30%;
+    text-decoration: none;
 }
