@@ -2,20 +2,18 @@ import React, { useEffect, useState } from "react";
 import Collaps from "../Components/Collaps";
 import { useLocation } from "react-router-dom";
 import Header from "../Components/Header";
+import Footer from "../Components/Footer";
 import ApartmentPageTitle from "../Components/ApartmentPageTitle";
+import "./styles/Apartment.css"
 
 
 function ApartmentPage() {
   const location = useLocation();
   console.log("location:", location);
-  {
     /*useState sert à initialisé selectedFlat avec la valeur null, et la fonction setSelectedFlat est utilisée pour mettre à jour cet état. */
-  }
-  const [selectedFlat, setSelectedFlat] = useState(null);
-  {
+  const [selectedFlat, setSelectedFlat] = useState();
     /*useEffect est utilisé pour effectuer une action  */
-  }
-  useEffect(fetchApartmentData, []);
+  useEffect(fetchApartmentData, [location.state.apartmentId]);
 
   function fetchApartmentData() {
     fetch("logements.json")
@@ -28,9 +26,7 @@ function ApartmentPage() {
       })
       .catch(console.error);
   }
-  {
     /*si selectedflat ont été chargé et est pas nul affiche le contenue et si il est null retourn loading en atendant */
-  }
   if (selectedFlat == null) return <div>...Loading</div>;
 
   return (
@@ -45,6 +41,7 @@ function ApartmentPage() {
           host={selectedFlat.host}
           rating={selectedFlat.rating}
         />
+        <div className="bloc_description">
           <Collaps
             content={selectedFlat.description}
             title="Description"
@@ -55,7 +52,9 @@ function ApartmentPage() {
               <li key={i}> {eq} </li>
             ))}
           />
+          </div>
         </div>
+        <Footer />
     </div>
   );
 }

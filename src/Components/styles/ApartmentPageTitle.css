@@ -1,0 +1,63 @@
+.tag{
+    background-color: #FF6060 ; 
+    border-radius: 25px;
+    padding: 10px;
+    color: white;
+}
+.tags{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 10px;
+    
+}
+.infos{
+    width: 100%;
+    height: 35vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.description{
+    width: 44vw;
+}
+h3{
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    margin-right: 5%;
+}
+.details{
+    display: flex;
+    margin: 15%;
+}
+.apartment_area{
+    width: 90%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-right: 5%;
+    margin-left: 5%;
+
+}
+.badge img{
+    border-radius: 100px;
+    width: 100%;
+}
+.color{
+    color: #FF6060;
+}
+.montserrat{
+    font-family: Montserrat;
+}
+.grey{
+    color: #E3E3E3;
+}
+.star{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+}

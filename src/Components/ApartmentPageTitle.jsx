@@ -1,4 +1,5 @@
 import React from "react";
+import "./styles/ApartmentPageTitle.css"
 
 
 function ApartmentPageTitle(props) {
@@ -7,8 +8,8 @@ function ApartmentPageTitle(props) {
 
   return (
     <div>
-      <div className="header">
-        <div className="apartement-page__title">
+      <div className="infos">
+        <div className="apartement-page__title color montserrat">
           <h1>{props.title}</h1>
           <h2> {props.location} </h2>
           <div className="tags">
@@ -20,7 +21,7 @@ function ApartmentPageTitle(props) {
             ))}
           </div>
         </div>
-        <div className="apartment_owner">
+        <div className="apartment_owner color montserrat">
           <div className="details">
             <h3>
               <span>{firstName}</span>
@@ -33,9 +34,8 @@ function ApartmentPageTitle(props) {
 
           <div className="star">
             {[1, 2, 3, 4, 5].map((num) => (
-              <span className={props.rating >= num ? "on" : null} key={num}>
-                ★
-              </span>
+              <i className={props.rating >= num ? "fas fa-star fa-xl color" : "fas fa-star fa-xl grey"} key={num}>
+              </i>
             ))}
           </div>
         </div>
