@@ -5,6 +5,7 @@ import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import ApartmentPageTitle from "../Components/ApartmentPageTitle";
 import "./styles/Apartment.css"
+import Carrousel from "../Components/Carrousel";
 
 
 function ApartmentPage() {
@@ -32,6 +33,7 @@ function ApartmentPage() {
   return (
     <div className="Apartement-page">
         <Header />
+        <Carrousel images={selectedFlat.pictures}/>
         <div className="apartment_area">
         <ApartmentPageTitle
           title={selectedFlat.title}
