@@ -1,19 +1,37 @@
-.banner{
-    width: 80%;
-    height: 25vh;
-    border-radius: 25px;
-    background-color: #000000;
+.banner {
+    width: 85%;
+    min-height: 150px;
+    margin: auto;
+    border-radius: 1rem;
+    background-color: black;
+    mix-blend-mode: darken;
+    opacity: 1;
+    margin-bottom: 2rem;
+    background-size: cover;
+    background-position: center;
 }
-.banner img{
-    width: 100%;
-    height: 100% ;
-    object-fit: cover;
-    opacity: 0.6 ;
-    border-radius: 25px;
-}
-.banner h1{
-    position: absolute;
-    top: 25%;
-    right: 37%;
+
+
+.titre-banner{
     color: white;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+@media screen and (width <= 768px) {
+    .titre-banner {
+        display: flex;
+        align-items: flex-end;
+    }
+}
+
+.bannerAccueil{
+    background-image: url(/public/images/banner.png);
+}
+.bannerPropos{
+    background-image: url(/public/images/bannerAPropos.png);
 }

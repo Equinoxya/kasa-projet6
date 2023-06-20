@@ -9,14 +9,14 @@ function Collaps(props) {
   };
   return (
     <div className="description">
-      <p className="titre_description">
+      <p className="titre_description" onClick={showContent}>
         <span>{props.title}</span>
         <span>
           <i
             className={`fa-solid block ${
               isContentVisible ? "fa-chevron-up" : "fa-chevron-down"
             }`}
-            onClick={showContent}
+            
           ></i>
         </span>
       </p>

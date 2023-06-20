@@ -1,3 +1,60 @@
-.carrousel{
-    width: 45vw;
+.image-show {
+    margin-bottom: 2rem;   
+    position: absolute;
+    inset: 0;
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+.container{
+    position: relative;
+    height: 45rem;
+    width: 90%; 
+    object-fit: cover;
+}
+.next{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 5rem;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    font-size: 3rem;
+    border: none;
+    outline: none;
+
+}
+.previous{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 5rem;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    font-size: 3rem;
+    border: none;
+    outline: none;
+}
+.counter{
+    position: absolute;
+    color: white;
+    bottom: 0;
+    font-weight: 700;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+@media screen and (width <= 768px) {
+    .container {
+        height: 45vh;
+    }
 }

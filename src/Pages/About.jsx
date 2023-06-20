@@ -7,8 +7,9 @@ import Collaps from '../Components/Collaps';
 
 const About = () => {
     return (
+        <div><Header />
         <div className='about'>
-            <Header />
+            
             <BannerAbout />
             <div className='about-container'>
                 <Collaps 
@@ -30,6 +31,7 @@ const About = () => {
             </div>
             <Footer />
         </div>  
+        </div>
     );
 };
 

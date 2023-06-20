@@ -1,4 +1,4 @@
-import './App.scss';
+import './App.css';
 import React from 'react';
 import {Routes, Route, BrowserRouter } from 'react-router-dom';
 import Home from './Pages/Home';
@@ -13,7 +13,7 @@ function App() {
                 <Route path='/' element={<Home />}/>
                 <Route path='/About' element={<About />}/>
                 <Route path='*' element={<Error />}/>
-                <Route path='/Apartment' element={<ApartmentPage />}/>
+                <Route path='/Apartment/' element={<ApartmentPage />}/>
           </Routes>
       </BrowserRouter>
   );

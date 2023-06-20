@@ -13,14 +13,16 @@ const Carrousel = ({ images }) => {
     };
   
     return (
-      <div className='carrousel'>
-        <button onClick={previousSlide}><i class="fa-solid fa-chevron-left fa-xl"></i></button>
-        <img src={images[currentSlide]} alt={`Slide ${currentSlide}`} />
-            <div className='currentSlide'>
-                <p>{currentSlide + 1}/{images.length}</p>
-            </div>
-        <button onClick={nextSlide}><i class="fa-solid fa-chevron-right fa-xl"></i></button>
-      </div>
+
+        <div className='container'>
+          
+          <img src={images[currentSlide]} alt={`Slide ${currentSlide}`} className='image-show' />
+              <div className='currentSlide'>
+                  <p className='counter'>{currentSlide + 1}/{images.length}</p>
+              </div>
+            <button onClick={previousSlide} className='previous'><i className="fa-solid fa-chevron-left fa-xl"></i></button>
+          <button onClick={nextSlide} className='next'><i className="fa-solid fa-chevron-right fa-xl"></i></button>
+        </div>
     );
   };
 
