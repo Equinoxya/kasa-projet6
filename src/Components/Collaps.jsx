@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import "../Components/styles/collaps.css";
 
 function Collaps(props) {
-  const [isContentVisible, setIsContentVisible] = useState(true);
+  const [isContentVisible, setIsContentVisible] = useState(false); // Set to false
 
   const showContent = () => {
     setIsContentVisible(!isContentVisible);
   };
+
   return (
     <div className="description">
       <p className="titre_description" onClick={showContent}>
@@ -16,7 +17,6 @@ function Collaps(props) {
             className={`fa-solid block ${
               isContentVisible ? "fa-chevron-down" : "fa-chevron-up"
             }`}
-            
           ></i>
         </span>
       </p>

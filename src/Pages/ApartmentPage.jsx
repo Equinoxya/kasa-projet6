@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Collaps from "../Components/Collaps";
-import { unstable_HistoryRouter, useLocation, useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import ApartmentPageTitle from "../Components/ApartmentPageTitle";
@@ -13,7 +13,7 @@ function ApartmentPage() {
   const location = useLocation();
   console.log("location:", location);
   const [selectedFlat, setSelectedFlat] = useState();
-  useEffect(fetchApartmentData, [location.id]);
+  useEffect(fetchApartmentData, []);
   const navigate = useNavigate();
 
   function fetchApartmentData() {
