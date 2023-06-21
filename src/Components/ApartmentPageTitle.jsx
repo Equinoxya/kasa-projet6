@@ -9,7 +9,7 @@ function ApartmentPageTitle(props) {
   return (
     <div>
       <div className="infos">
-        <div className="apartement-page__title color montserrat">
+        <div className="apartement-page__title color">
           <h1>{props.title}</h1>
           <h2> {props.location} </h2>
           <div className="tags">
@@ -21,7 +21,7 @@ function ApartmentPageTitle(props) {
             ))}
           </div>
         </div>
-        <div className="apartment_owner color montserrat">
+        <div className="apartment_owner color">
           <div className="details">
             <h3>
               <span>{firstName}</span>

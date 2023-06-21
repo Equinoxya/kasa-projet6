@@ -6,6 +6,7 @@ import Footer from "../Components/Footer";
 import ApartmentPageTitle from "../Components/ApartmentPageTitle";
 import "./styles/Apartment.css"
 import Carrousel from "../Components/Carrousel";
+import Error from "./Error404";
 
 
 function ApartmentPage() {
@@ -28,7 +29,7 @@ function ApartmentPage() {
       .catch(console.error);
   }
     /*si selectedflat ont été chargé et est pas nul affiche le contenue et si il est null retourn loading en atendant */
-  if (selectedFlat == null) return <div>...Loading</div>;
+  if (selectedFlat == null) return <Error />;
 
   return (
     <div className="Apartement-page">

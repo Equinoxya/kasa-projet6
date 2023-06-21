@@ -14,7 +14,7 @@ function Collaps(props) {
         <span>
           <i
             className={`fa-solid block ${
-              isContentVisible ? "fa-chevron-up" : "fa-chevron-down"
+              isContentVisible ? "fa-chevron-down" : "fa-chevron-up"
             }`}
             
           ></i>
