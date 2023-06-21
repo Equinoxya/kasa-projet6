@@ -12,8 +12,8 @@ function App() {
           <Routes>
                 <Route path='/' element={<Home />}/>
                 <Route path='/About' element={<About />}/>
-                <Route path='*' element={<Error />}/>
-                <Route path='/Apartment/' element={<ApartmentPage />}/>
+                <Route path='/*' element={<Error />}/>
+                <Route path='/Apartment/:id' element={<ApartmentPage />}/>
           </Routes>
       </BrowserRouter>
   );

@@ -19,3 +19,15 @@ main p, a {
     font-family: Montserrat;
     color: #FF6060;
 }
+@media screen and (width <= 768px){
+    main h1{
+        font-size: 130px;
+    }
+    main p{
+        font-size: 24px;
+        margin: 5%;
+    }
+    main {
+        height: 75vh;
+    }
+}

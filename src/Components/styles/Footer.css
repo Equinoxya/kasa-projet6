@@ -20,4 +20,8 @@ footer img{
     height: auto;
 }
 
-
+@media screen and (width <= 768px) {
+    footer {
+        width: 102vw;
+    }
+}

@@ -56,5 +56,6 @@
 @media screen and (width <= 768px) {
     .container {
         height: 45vh;
+        width: 85%;
     }
 }

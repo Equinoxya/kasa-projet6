@@ -22,7 +22,7 @@ ul a{
     color: #FF6060;
     font-size: 24px;
     font-weight: 500;
-    width: 20%;
+    width: 31%;
 }
 ul li:hover{
     display: inline-block;
@@ -52,6 +52,9 @@ nav{
     header{
         margin-left: 0;
         margin-right: 5%;
+    }
+    ul{
+        width: 80%;
     }
     .propos{
         width: 8rem;

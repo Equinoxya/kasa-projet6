@@ -1,35 +1,36 @@
 import React, { useEffect, useState } from "react";
 import Collaps from "../Components/Collaps";
-import { useLocation } from "react-router-dom";
+import { unstable_HistoryRouter, useLocation, useNavigate, useParams } from "react-router-dom";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import ApartmentPageTitle from "../Components/ApartmentPageTitle";
 import "./styles/Apartment.css"
 import Carrousel from "../Components/Carrousel";
-import Error from "./Error404";
-
 
 function ApartmentPage() {
+  const { id } = useParams();
+  console.log("id:", id);
   const location = useLocation();
   console.log("location:", location);
-    /*useState sert à initialisé selectedFlat avec la valeur null, et la fonction setSelectedFlat est utilisée pour mettre à jour cet état. */
   const [selectedFlat, setSelectedFlat] = useState();
-    /*useEffect est utilisé pour effectuer une action  */
-  useEffect(fetchApartmentData, [location.state.apartmentId]);
+  useEffect(fetchApartmentData, [location.id]);
+  const navigate = useNavigate();
 
   function fetchApartmentData() {
-    fetch("logements.json")
+    fetch("/logements.json")
       .then((res) => res.json())
       .then((flats) => {
-        const flat = flats.find(
-          (flat) => flat.id === location.state.apartmentId
-        );
-        setSelectedFlat(flat);
+        const flat = flats.find((flat) => flat.id === id);
+        if (flat) {
+          setSelectedFlat(flat);
+        } else {
+          navigate('/Error404'); // Redirect to Error404 page
+        }
       })
       .catch(console.error);
   }
-    /*si selectedflat ont été chargé et est pas nul affiche le contenue et si il est null retourn loading en atendant */
-  if (selectedFlat == null) return <Error />;
+  
+  if (selectedFlat == null) return <p>loading...</p>;
 
   return (
     <div className="Apartement-page">
